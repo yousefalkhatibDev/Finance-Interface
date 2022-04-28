@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // pages
 import Home from "./Pages/Home";
-import Test from "./Pages/test";
+import JournalEntries from "./Pages/JournalEntries";
 
 // component
 import RouteBars from "./Components/RouteBars";
@@ -16,9 +16,8 @@ class Routing extends React.Component {
           <RouteBars />
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/test" element={<Test />} />
+            <Route exact path="/journal-entries" element={<JournalEntries />} />
           </Routes>
-          
         </BrowserRouter>
       </span>
     );

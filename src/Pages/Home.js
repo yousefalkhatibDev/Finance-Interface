@@ -1,7 +1,7 @@
 import React from "react";
 
 // style
-import "./../style/custom.css"
+import "./../style/custom.css";
 
 // components
 import SummaryCard from "../Components/SummaryCard";

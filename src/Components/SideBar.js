@@ -5,10 +5,10 @@ class SideBar extends React.Component {
   render() {
     return (
       <div class="sidebar">
-        <NavLink href="/home">Summary</NavLink>
-        <NavLink href="/news">Journal Entries</NavLink>
-        <NavLink href="/contact">Reports</NavLink>
-        <NavLink href="/about">Settings</NavLink>
+        <NavLink href="/">Summary</NavLink>
+        <NavLink href="/journal-entries">Journal Entries</NavLink>
+        <NavLink href="/reports">Reports</NavLink>
+        <NavLink href="/settings">Settings</NavLink>
       </div>
     );
   }

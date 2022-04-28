@@ -7,7 +7,7 @@ import "./../style/custom.css";
 class NavBar extends React.Component {
   render() {
     return (
-      <Navbar bg="dark" variant="dark" expand="lg" style={{height: "80px"}}>
+      <Navbar  expand="lg" className="navbar">
         <Container>
           <Navbar.Brand href="#home">Finance System</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
