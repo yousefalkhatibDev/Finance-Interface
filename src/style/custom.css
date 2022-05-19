@@ -1,0 +1,138 @@
+body {
+  background-color: rgba(243, 243, 243, 0.712);
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+.body-content {
+  margin-left: 205px;
+  padding: 1px 16px;
+  width: 87%;
+}
+
+/* navbar */
+.navbar {
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  font-weight: 500;
+  height: 80px;
+  width: 87.5%;
+  margin-left: auto;
+  line-height: 60px;
+  padding: 0 16px;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+}
+
+/* navbar-end */
+
+/* sidebar */
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: rgb(83, 83, 255);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* sidebar-end */
+
+/* summary-card */
+
+.summary-card {
+  width: 40%;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+  border-left: 5px rgb(72, 72, 255) solid;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 20px 20px;
+  font-weight: bold;
+  text-align: left;
+  /* float: left; */
+  margin-left: 20px;
+  -webkit-box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+}
+
+.summary-card .header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.summary-card .content {
+  padding-top: 20px;
+}
+.summary-card .value {
+  float: right;
+}
+
+.summary-card .group-name {
+  font-size: 25px;
+}
+
+/* summary-card-end */
+
+/* JournalEntrie */
+
+.JournalEntrie {
+  border: 1px solid rgba(0, 0, 0, 0.486);
+  padding: 5px;
+  display: flex;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.JournalEntrie p {
+  margin-left: 30px;
+}
+
+/* .JournalEntrie #Debit {
+  margin-left: 30px;
+  border: 1px solid red;
+}
+
+.JournalEntrie #Credit {
+  margin-left: 30px;
+  border: 1px solid red;
+} */
+
+/* Journal-Entrie-end */
+
+.container-r {
+  border: green 1px solid;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+  border-left: 5px rgb(72, 72, 255) solid;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 20px 10px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 20px;
+  -webkit-box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+}
+
+.search-box {
+  width: 30%;
+}
