@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: rgba(243, 243, 243, 0.712);
+  background-color: rgb(229 229 229);
   margin: 0px;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
@@ -14,22 +14,43 @@ body {
   padding: 1px 16px;
   width: 87%;
 }
-
 /* navbar */
-.navbar {
+.NavBar {
   background-color: #fff;
   border-radius: 0;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
   font-size: 14px;
   font-weight: 500;
-  height: 80px;
-  width: 87.5%;
+  width: 100%;
   margin-left: auto;
   line-height: 60px;
-  padding: 0 16px;
   transition: all 0.3s ease-in-out;
   -webkit-box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
   box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.NavBar a, .NavLink .link-inactive {
+  padding: 8px 16px;
+  color: rgb(118, 118, 118);
+  text-decoration: none;
+}
+
+.NavBar .link-active {
+  background-color: rgba(193, 193, 193, 0.396);
+  box-shadow: inset 1px 1px 10px rgb(150, 149, 149);
+}
+
+.NavBar a:hover {
+  background-color: rgba(191, 191, 191, 0.512);
+}
+
+.NavBar a i {
+  margin: 0 7px;
+  font-size: 18px;
 }
 
 /* navbar-end */

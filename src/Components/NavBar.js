@@ -1,36 +1,17 @@
 import React from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-
+import { NavLink } from "react-router-dom";
 // style
 import "./../style/custom.css";
 
 class NavBar extends React.Component {
   render() {
     return (
-      <Navbar  expand="lg" className="navbar">
-        <Container>
-          <Navbar.Brand href="#home">Finance System</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/home">Home</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <div className="NavBar">
+        <a href=""><i class="fas fa-arrow-alt-circle-left" id=""></i>Back</a>
+        <NavLink to="/journal-entries" className={({ isActive }) => (isActive ? 'link-active' : 'link-inactive')}><i class="fas fa-building" id=""></i>Businesses</NavLink>
+        <NavLink to="/reports" className={({ isActive }) => (isActive ? 'link-active' : 'link-inactive')}><i class="fas fa-people-group" id=""></i>Users</NavLink>
+        <NavLink to="/settings" className={({ isActive }) => (isActive ? 'link-active' : 'link-inactive')}><i class="fas fa-question-circle" id=""></i>Support</NavLink>
+      </div>
     );
   }
 }
