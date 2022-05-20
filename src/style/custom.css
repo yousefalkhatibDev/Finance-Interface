@@ -1,7 +1,12 @@
+html {
+  height: 100%;
+}
+
 body {
   background-color: rgba(243, 243, 243, 0.712);
   margin: 0px;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 .body-content {
@@ -134,5 +139,548 @@ body {
 }
 
 .search-box {
-  width: 30%;
+  width: 33%;
+}
+
+/* Journal Entries card */
+
+.JournalEntries-card {
+  height: 50%;
+  width: 900px;
+  margin-top: 5%;
+  border-radius: 7px;
+  border: 1.5px solid rgb(185, 185, 185);
+  background-color: rgba(238, 238, 238, 0.544);
+  margin-bottom: 30px;
+}
+
+
+
+.JournalEntries-card .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 4px 2px -2px rgb(212, 212, 212);
+  height: 50px;
+}
+
+.JournalEntries-card .header .search-box {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.JournalEntries-card .header .search-box input {
+  margin-right: 2px;
+  padding: 4px 8px;
+}
+
+.JournalEntries-card .header .search-button {
+  background-color: #fff;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 4px;
+  font-size: 12px;
+  width: 60px;
+}
+
+.JournalEntries-card .header .search-button:hover {
+  background-color: rgba(189, 189, 189, 0.468);
+  border: 1px solid rgb(118, 118, 118);
+}
+
+.JournalEntries-card .header .button {
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 4px;
+  width: 120px;
+  height: 30px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.JournalEntries-card .header .button:hover {
+  background-color: rgba(189, 189, 189, 0.468);
+  border: 1px solid rgb(118, 118, 118);
+}
+
+.JournalEntries-card .header p {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: rgb(163, 163, 163);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.JournalEntries-card .body {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.JournalEntries-card .body .button {
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(0, 128, 255);
+  border: 1px solid rgb(0, 107, 214);
+  color: white;
+  font-weight: 700;
+  height: 50px;
+  width: 180px;
+}
+
+.JournalEntries-card .body .button:hover {
+  background-color: rgb(2, 105, 208);
+}
+
+.JournalEntries-card .body table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.JournalEntries-card .body table button {
+  background-color: #fff;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 4px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.JournalEntries-card .body table button:hover {
+  background-color: rgba(189, 189, 189, 0.468);
+  border: 1px solid rgb(118, 118, 118);
+}
+
+.JournalEntries-card .body td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: rgb(132, 132, 132);
+  font-size: 14px;
+}
+
+.JournalEntries-card .body #td-1 {
+  width: 7%;
+  text-align: center;
+}
+
+.JournalEntries-card .body #td-2 {
+  width: 7%;
+  text-align: center;
+}
+
+.JournalEntries-card .body #td-3 {
+  width: 10%;
+  text-align: center; 
+}
+
+.JournalEntries-card .body #td-4 {
+  width: 50%; 
+}
+
+.JournalEntries-card .body #td-5 {
+  text-align: end;
+}
+
+.JournalEntries-card .body #td-6 {
+  text-align: end;
+}
+
+.JournalEntries-card .body #td-7 {
+  text-align: center;
+}
+
+
+.JournalEntries-card .footer {
+  border-top: 1px solid rgb(180, 180, 180);
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+
+.JournalEntries-card .footer .entries-counter-span {
+  border: 1px solid rgb(150, 150, 150);
+  width: 20px;
+  height: 22px;
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: 10px;
+  font-size: 13px;
+  color: rgb(150, 150, 150);
+}
+
+.JournalEntries-card .footer .button {
+  height: 20px;
+  width: 80px;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 500;
+  margin-right: 4px;
+  color: rgb(153, 153, 153);
+}
+
+.JournalEntries-card .footer .button:hover {
+  background-color: rgba(164, 164, 164, 0.407);
+}
+
+/* create new journal entry */
+
+.CreateNewJournalEntry-card {
+  height: 50%;
+  width: 900px;
+  margin-top: 5%;
+  border-radius: 7px;
+  border: 1.5px solid rgb(185, 185, 185);
+  background-color: rgba(238, 238, 238, 0.544);
+  margin-bottom: 80px;
+}
+.CreateNewJournalEntry-card .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 4px 2px -2px rgb(212, 212, 212);
+  height: 50px;
+}
+
+#remove-margin-CreateNewJournalEntry {
+  margin-bottom: -4%;
+}
+
+.CreateNewJournalEntry-card .header-2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+  height: 50px;
+}
+
+.CreateNewJournalEntry-card .header-2 a {
+  font-weight: 600;
+  margin-left: 10px;
+  margin-right: 6px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.CreateNewJournalEntry-card .header-2 p {
+  font-size: 11px;
+  color: grey;
+  margin-top: 17px;
+}
+
+.CreateNewJournalEntry-card .header p {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+  color: rgb(163, 163, 163);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.CreateNewJournalEntry-card .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 30px;
+  margin-top: 35px;
+}
+
+.CreateNewJournalEntry-card .body .button {
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.CreateNewJournalEntry-card .body .button:hover {
+  background-color: rgb(203, 203, 203);
+  border: 1px solid #909090;
+}
+
+.CreateNewJournalEntry-card .body label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.CreateNewJournalEntry-card .body .input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.CreateNewJournalEntry-card .body .input-container:nth-of-type(1) {
+  margin-right: 10px;
+}
+
+.CreateNewJournalEntry-card .body .input-group-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.CreateNewJournalEntry-card .body .input-group-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.CreateNewJournalEntry-card .body .merge-inputs-addon {
+  padding: 5px 11px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.CreateNewJournalEntry-card .body #text-input {
+  text-align: center;
+}
+
+.CreateNewJournalEntry-card .body #text-input-1 {
+  width: 550px;
+}
+
+.CreateNewJournalEntry-card .body input, select , .JournalEntries-card .header input {
+  border-radius: 2px;
+  border: 1px solid #cccccc;
+}
+
+.CreateNewJournalEntry-card .body input:focus , .JournalEntries-card .header input:focus {
+  outline: 1px solid #5879dd;
+  box-shadow: 1px 1px 20px rgba(72, 152, 227, 0.663);
+}
+
+.CreateNewJournalEntry-card .body select {
+  width: 200px;
+  height: 27px;
+}
+
+.CreateNewJournalEntry-card .body #number-input {
+  margin-right: 5px;
+}
+
+.CreateNewJournalEntry-card .body #Debit-result {
+  background-color: rgba(150, 150, 150, 0.521);
+  text-align: end;
+}
+
+.CreateNewJournalEntry-card .body #Credit-result {
+  background-color: rgba(150, 150, 150, 0.521);
+  text-align: end;
+  margin-right: 5px;
+}
+
+.CreateNewJournalEntry-card .body .Credit-Debit-results {
+  width: 616px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-top: -10px;
+}
+
+.CreateNewJournalEntry-card .footer {
+  border-top: 1px solid rgb(180, 180, 180);
+  height: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 14px;
+}
+
+.CreateNewJournalEntry-card .footer .button:nth-of-type(1) {
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(0, 128, 255);
+  border: 1px solid rgb(0, 107, 214);
+  color: white;
+  height: 30px;
+  width: 70px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 4px;
+
+}
+
+.CreateNewJournalEntry-card .footer .button:nth-of-type(1):hover {
+  background-color: rgb(0, 104, 209);
+}
+
+.CreateNewJournalEntry-card .footer .button:nth-of-type(2) {
+  border: none;
+  border-radius: 3px;
+  background-color: none;
+  border: 1px solid rgb(180, 180, 180);
+  color: rgb(0, 0, 0);
+  height: 30px;
+  width: 150px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 4px;
+
+}
+
+.CreateNewJournalEntry-card .footer .button:nth-of-type(2):hover {
+  border: 1px solid rgb(105, 105, 105);
+}
+
+.fa-caret-right {
+  color: rgba(171, 170, 170, 0.702);
+  margin-right: 10px;
+}
+
+.fa-xmark {
+  transform: translateY(25px);
+  margin-left: 10px;
+  color: rgb(170, 170, 170);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.fa-xmark:hover {
+  color: rgb(126, 126, 126);
+}
+
+.checkbox-label {
+  margin-left: 8px;
+  transform: translateY(-2.5px);
+}
+
+/* view journal entry */
+
+.JournalEntries-card .header .button-viewJournalEntry {
+  background-color: #fff;
+  border: 1px solid rgb(150, 150, 150);
+  margin-right: 7px;
+  border-radius: 4px;
+}
+
+.JournalEntries-card .header .button-viewJournalEntry:hover {
+  background-color: rgb(203, 203, 203);
+  border: 1px solid #909090;
+}
+
+.JournalEntries-card .header .backward-forward-icons button {
+  background-color: #fff;
+  border: 1px solid rgb(150, 150, 150);
+  width: 70px;
+}
+
+.JournalEntries-card .header .backward-forward-icons button:hover {
+  background-color: rgb(203, 203, 203);
+  border: 1px solid #909090;
+}
+
+.JournalEntries-card .header .backward-forward-icons button:nth-of-type(1),
+.JournalEntries-card .header .backward-forward-icons button:nth-of-type(3)
+{
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.JournalEntries-card .header .backward-forward-icons button:nth-of-type(2),
+.JournalEntries-card .header .backward-forward-icons button:nth-of-type(4)
+{
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.JournalEntries-card .header .backward-forward-icons span {
+  margin: 0 10px;
+  color: #909090;  
+}
+
+.JournalEntries-card .body .paper {
+  height: 400px;
+  width: 100%;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgb(146, 146, 146);
+}
+
+.JournalEntries-card .body .paper .paper-header {
+  text-align: start;
+  padding: 35px;
+}
+
+.JournalEntries-card .body .paper span {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.JournalEntries-card .body .paper span div:nth-of-type(1) {
+  margin-right: 20px;
+}
+
+.JournalEntries-card .body .paper span div:nth-of-type(2) h1 {
+  border-left: 1px solid black;
+  margin: 0;
+  padding-left: 20px;
+  margin-right: 30px;
+}
+
+.JournalEntries-card .body .paper span div:nth-of-type(2) p {
+  border-left: 1px solid black;
+  margin: 0;
+  padding-left: 20px;
+  margin-right: 50px;
+}
+
+.JournalEntries-card .body .paper .view-table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.JournalEntries-card .body .paper .view-table {
+  width: 90%;
+  
+}
+
+.JournalEntries-card .body .paper .view-table td,
+.JournalEntries-card .body .paper .view-table th
+{
+  border-color: black;
+  color: black;
+}
+
+.JournalEntries-card .body .paper .view-table th {
+  border-color: black;
+}
+
+.Update-button {
+  background-color: rgb(62, 186, 24) !important;
+  border: 1px solid rgb(53, 160, 20) !important;
+  color: #fff !important;
+  width: 80px !important;
+  height: 35px !important;
+}
+
+.Update-button:hover {
+  background-color: rgb(53, 156, 21) !important;
+  border: 1px solid rgb(49, 147, 19) !important;
+}
+
+.Delete-button {
+  background-color: red;
+  color: #fff !important;
+  width: 80px !important;
+  height: 35px !important;
+}
+
+.Delete-button:hover {
+  background-color: rgb(190, 0, 0);
+  border: none !important;
 }

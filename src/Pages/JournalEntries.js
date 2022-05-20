@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Modal } from "react-bootstrap";
 
 // components
-import JournalEntrie from "../Components/JournalEntrie";
+import JournalEntry from "../Components/JournalEntry";
 
 // styles
 import "./../style/custom.css";
@@ -12,55 +12,95 @@ class JournalEntries extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false,
+      entries: [],
     };
-
-    this.modal = this.modal.bind(this);
   }
-
-  modal() {
-    this.setState({ show: !this.state.show });
+  componentDidMount() {
+    if(localStorage.getItem("entries")) {
+      const localStorageEntries = JSON.parse(localStorage.getItem("entries"))
+      this.setState({
+        entries: localStorageEntries,
+      })
+    }
+    
   }
-
   render() {
     return (
       <div className="body-content">
-        <div className="container-r">
-          <div className="header" style={{ display: "flex" }}>
-            <p style={{ fontSize: "20px" }}>Journal Entries</p>
-            <Button variant="success" onClick={this.modal}>
-              New Journal Entries
-            </Button>
-            <input className="form-control search-box" />
-            <Button variant="primary">Search</Button>
+        {
+        this.state.entries.length 
+        ? 
+        <div className="JournalEntries-card ">
+          <div className="header padding">
+            <>
+            <p>Journal Entries</p> 
+            <a href="/journal-entries/create">
+              <button className="button">
+                New Journal Entry
+              </button>
+            </a>
+            </>
+            <div className="search-box">
+              <input type="text" placeholder="Search"/>
+              <button className="search-button">Search</button>
+            </div>
           </div>
-
-          <hr />
-
-          <JournalEntrie />
-          <JournalEntrie />
-          <JournalEntrie />
-          <p>number of journal 3</p>
+          <div className="body" style={{height: "auto"}}>
+            <table>
+              <tr>
+                <th id="td-1"><i class="fas fa-edit" style={{fontSize: "16px", opacity: 0.25}}></i></th>
+                <th id="td-2"><i class="fas fa-print" style={{fontSize: "16px", opacity: 0.25}}></i></th>
+                <th id="td-3">Date</th>
+                <th id="td-4">Narration</th>
+                <th id="td-5">Debit</th>
+                <th id="td-6">Credit</th>
+                <th id="td-7">Status</th>
+              </tr>
+              {
+                this.state.entries.map((e) => {
+                  return (
+                    <tr>
+                    <td><a href={`/journal-entries/edit/${e.id}`}><button>Edit</button></a></td>
+                    <td><a href={`/journal-entries/view/${e.id}`}><button>view</button></a></td>
+                    <td>{e.date}</td>
+                    <td>{e.narration}</td>
+                    <td>{e.accounts[0].debit}</td>
+                    <td>{e.accounts[0].credit}</td>
+                    <td></td>
+                    </tr>
+                  )
+                })
+              }
+            </table>
+          </div>
+          <div className="footer">
+            <span className="entries-counter-span">{this.state.entries.length}</span>
+            <button className="button" style={{width: "130px", fontSize: "11px", height: "25px"}}>Copy to clipboard</button>
+            <button className="button" style={{ fontSize: "11px", height: "25px"}}>Batch View</button>
+            <button className="button" style={{ fontSize: "11px", height: "25px", width: "90px"}}>Batch Create</button>
+            <button className="button" style={{ fontSize: "11px", height: "25px", width: "90px"}}>Batch Update</button>
+            <button className="button" style={{ fontSize: "11px", height: "25px", width: "90px"}}>Batch Delete</button>
+          </div>
+          </div>
+          :
+          <div className="JournalEntries-card">
+          <div className="header">
+            <p>Journal Entries</p>
+            <a href="/journal-entries/create">
+               <button className="button">New Journal Entry</button>
+            </a> 
+          </div>
+          <div className="body">
+            <a href="/journal-entries/create">
+              <button className="button">New Journal Entry</button>
+            </a>
+          </div>
+          <div className="footer">
+            <button className="button">Batch Create</button>
+          </div>
         </div>
-
-        <Modal show={this.state.show} onHide={this.modal}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <input type="date" class="form-control" />
-            <input type="text" class="form-control" />
-            <input id="dd" type="number" class="form-control" />
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={this.modal}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={this.modal}>
-              Save
-            </Button>
-          </Modal.Footer>
-        </Modal>
+        }
+        
       </div>
     );
   }
