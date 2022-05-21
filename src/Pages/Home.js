@@ -1,4 +1,5 @@
 import React from "react";
+import PageWrapper from "../Components/PageWrapper";
 
 // style
 import "./../style/custom.css";
@@ -9,8 +10,8 @@ import SummaryCard from "../Components/SummaryCard";
 class Home extends React.Component {
   render() {
     return (
-      <div className="body-content">
-        <SummaryCard />
+      <div className="Home">
+        <PageWrapper />
       </div>
     );
   }

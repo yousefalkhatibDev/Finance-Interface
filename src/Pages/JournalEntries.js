@@ -1,5 +1,7 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
+import PageWrapper from "../Components/PageWrapper";
+
 
 // components
 import JournalEntry from "../Components/JournalEntry";
@@ -26,6 +28,7 @@ class JournalEntries extends React.Component {
   }
   render() {
     return (
+      <PageWrapper>
       <div className="body-content">
         {
         this.state.entries.length 
@@ -100,8 +103,8 @@ class JournalEntries extends React.Component {
           </div>
         </div>
         }
-        
       </div>
+      </PageWrapper>
     );
   }
 }

@@ -5,15 +5,139 @@ html {
 body {
   background-color: rgb(229 229 229);
   margin: 0px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 }
 
-.body-content {
-  margin-left: 205px;
-  padding: 1px 16px;
-  width: 87%;
+/* main card */
+
+.PageWrapper {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
 }
+
+.Main-card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Main-card {
+  width: 93%;
+  margin-top: 2.5%;
+  border: 1.5px solid rgb(185, 185, 185);
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+}
+
+.Main-card .header-2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+  height: 70px;
+}
+
+.Main-card .header-2 a {
+  font-weight: 600;
+  margin-left: 10px;
+  margin-right: 6px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.Main-card .header-2 p {
+  font-size: 11px;
+  color: grey;
+  margin-top: 17px;
+}
+
+.Main-card .button {
+  background-color: white;
+  border: 1px solid rgb(150, 149, 149);
+  margin: 0px 5px;
+  border-radius: 4px;
+}
+
+.Main-card .button:hover {
+  background-color: rgba(238, 238, 238, 0.544);
+}
+
+.Main-card .buttons-container {
+  margin-left: auto;
+}
+
+.Main-card .header {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0px 12px;
+}
+
+/* page content */
+
+.page-content-container {
+  background-color: #fff;
+  width: 93%;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.page-content-container .links-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  width: auto;
+}
+
+.page-content-container .links-container a {
+  padding: 6px 12px;
+  text-decoration: none;
+  font-size: 13px;
+  width: 190px;
+}
+
+.page-content-container .links-container a i {
+  margin-right: 13px;
+  color: rgb(146, 146, 146);
+}
+
+.page-content-container .links-container .link-inactive {
+  background-color: rgba(238, 238, 238, 0.544);
+  border-bottom: 1px solid rgb(150, 150, 150);
+  border-right: 1px solid rgb(150, 150, 150);
+  border-left: 1px solid rgb(150, 150, 150);
+}
+
+.page-content-container .links-container .link-active {
+  border-left: 1px solid rgb(150, 150, 150);
+  border-bottom: 1px solid rgb(150, 150, 150);
+}
+
+.page-content-container .links-container div {
+  height: 100%;
+  background-color: rgb(229 229 229);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-content-container .links-container div p {
+  color: #0d6efd;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.page-content-container .links-container div p:hover {
+  text-decoration: underline;
+}
+
+.page-content-container .links-container div i {
+  color: rgb(132, 132, 132);
+  margin-bottom: 125px;
+}
+
 /* navbar */
 .NavBar {
   background-color: #fff;
@@ -25,8 +149,8 @@ body {
   margin-left: auto;
   line-height: 60px;
   transition: all 0.3s ease-in-out;
-  -webkit-box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
-  box-shadow: 0px 8px 7px -3px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 0px 4px 4px -3px rgba(18, 18, 18, 0.27);
+  box-shadow: 0px 4px 4px -3px rgba(18, 18, 18, 0.27);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -166,13 +290,13 @@ body {
 /* Journal Entries card */
 
 .JournalEntries-card {
-  height: 50%;
-  width: 900px;
-  margin-top: 5%;
+  width: 1000px;
+  margin-top: 3%;
   border-radius: 7px;
   border: 1.5px solid rgb(185, 185, 185);
   background-color: rgba(238, 238, 238, 0.544);
   margin-bottom: 30px;
+  margin-right: 20px;
 }
 
 
@@ -332,6 +456,7 @@ body {
   margin-left: 10px;
   font-size: 13px;
   color: rgb(150, 150, 150);
+  text-align: center;
 }
 
 .JournalEntries-card .footer .button {
@@ -351,15 +476,21 @@ body {
 
 /* create new journal entry */
 
+.CreateNewJournalEntry-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .CreateNewJournalEntry-card {
-  height: 50%;
   width: 900px;
   margin-top: 5%;
   border-radius: 7px;
   border: 1.5px solid rgb(185, 185, 185);
   background-color: rgba(238, 238, 238, 0.544);
-  margin-bottom: 80px;
+  margin-right: 60px;
+  margin-bottom: 50px;
 }
+
 .CreateNewJournalEntry-card .header {
   display: flex;
   justify-content: flex-start;
@@ -579,6 +710,12 @@ body {
 }
 
 /* view journal entry */
+
+.JournalEntries-container {
+  display: flex;
+  flex-direction: column;
+  
+}
 
 .JournalEntries-card .header .button-viewJournalEntry {
   background-color: #fff;
