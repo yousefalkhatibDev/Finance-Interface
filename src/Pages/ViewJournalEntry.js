@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { useParams } from "react-router-dom";
+import PageWrapper from "../Components/PageWrapper";
+
 
 const withParams = Component => props => {
     const { id } = useParams();
@@ -10,14 +12,15 @@ const withParams = Component => props => {
 class ViewJournalEntry extends Component {
   render() {
     return (
-      <>
+      <PageWrapper>
+      <div className="JournalEntries-container">
         <div className="body-content">
             <div className="CreateNewJournalEntry-card" id="remove-margin-CreateNewJournalEntry">
                 <div className="header-2"><a href="/journal-entries">Journal Entries</a> <i class="fa-solid fa-caret-right"></i> <p>Journal Entry - View</p></div>
             </div>
         </div>
         <div className="body-content">
-        <div className="JournalEntries-card">
+        <div className="JournalEntries-card" style={{width: "900px", marginTop: "55px"}}>
             <div className="header">
               <p>Journal Entries</p>
                    <button className="button-viewJournalEntry">Edit</button>
@@ -73,7 +76,8 @@ class ViewJournalEntry extends Component {
           </div>
         </div>
         </div>
-      </>
+      </div>
+      </PageWrapper>
     )
   }
 }

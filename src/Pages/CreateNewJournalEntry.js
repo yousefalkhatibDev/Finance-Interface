@@ -1,6 +1,8 @@
 import { getElementError } from '@testing-library/react';
 import uuid from 'react-uuid'
 import React, { Component } from 'react'
+import PageWrapper from "../Components/PageWrapper";
+
 
 export default class CreateNewJournalEntry extends Component {
     constructor(props) {
@@ -74,10 +76,12 @@ export default class CreateNewJournalEntry extends Component {
     }
   render() {
     return (
-        <>
+        <PageWrapper>
+        <div className='CreateNewJournalEntry-container'>
             <div className="body-content">
                 <div className="CreateNewJournalEntry-card" id="remove-margin-CreateNewJournalEntry">
-                    <div className="header-2"><a href="/journal-entries">Journal Entries</a> <i class="fa-solid fa-caret-right"></i> <p>Journal Entry - Edit</p></div>
+                    <div className="header-2"><a href="/journal-entries">Journal Entries</a> <i class="fa-solid fa-caret-right"></i> 
+                    <p>Journal Entry - Create</p></div>
                 </div>
             </div>
             <div className="body-content">
@@ -173,7 +177,8 @@ export default class CreateNewJournalEntry extends Component {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
+        </PageWrapper>
     )
   }
 }

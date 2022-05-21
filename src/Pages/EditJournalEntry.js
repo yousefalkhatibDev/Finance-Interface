@@ -1,5 +1,7 @@
 import uuid from "react-uuid"
 import React, { Component } from 'react'
+import PageWrapper from "../Components/PageWrapper";
+
 
 export default class EditJournalEntry extends Component {
     constructor(props) {
@@ -73,7 +75,8 @@ export default class EditJournalEntry extends Component {
     }
   render() {
     return (
-        <>
+        <PageWrapper>
+        <div className="CreateNewJournalEntry-container">
         <div className="body-content">
             <div className="CreateNewJournalEntry-card" id="remove-margin-CreateNewJournalEntry">
                 <div className="header-2"><a href="/journal-entries">Journal Entries</a> <i class="fa-solid fa-caret-right"></i> <p>Journal Entry - Edit</p></div>
@@ -172,7 +175,8 @@ export default class EditJournalEntry extends Component {
                 </div>
             </div>
         </div>
-    </>
+    </div>
+    </PageWrapper>
     )
   }
 }
