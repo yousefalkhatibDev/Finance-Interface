@@ -33,7 +33,7 @@ class JournalEntries extends React.Component {
         {
         this.state.entries.length 
         ? 
-        <div className="JournalEntries-card ">
+        <div className="JournalEntries-card" >
           <div className="header padding">
             <>
             <p>Journal Entries</p> 

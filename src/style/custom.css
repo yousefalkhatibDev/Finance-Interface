@@ -26,7 +26,7 @@ body {
 .Main-card {
   width: 93%;
   margin-top: 2.5%;
-  border: 1.5px solid rgb(185, 185, 185);
+  border: 1.5px solid rgb(229 229 229);
   background-color: rgb(238, 238, 238);
   padding: 10px;
 }
@@ -55,7 +55,7 @@ body {
 
 .Main-card .button {
   background-color: white;
-  border: 1px solid rgb(150, 149, 149);
+  border: 1px solid rgb(229 229 229);
   margin: 0px 5px;
   border-radius: 4px;
 }
@@ -104,14 +104,14 @@ body {
 
 .page-content-container .links-container .link-inactive {
   background-color: rgba(238, 238, 238, 0.544);
-  border-bottom: 1px solid rgb(150, 150, 150);
-  border-right: 1px solid rgb(150, 150, 150);
-  border-left: 1px solid rgb(150, 150, 150);
+  border-bottom: 1px solid rgb(229, 229, 229);
+  border-right: 1px solid rgb(229, 229, 229);
+  border-left: 1px solid rgb(229, 229, 229);
 }
 
 .page-content-container .links-container .link-active {
-  border-left: 1px solid rgb(150, 150, 150);
-  border-bottom: 1px solid rgb(150, 150, 150);
+  border-left: 1px solid rgb(229, 229, 229);
+  border-bottom: 1px solid rgb(229, 229, 229);
 }
 
 .page-content-container .links-container div {
@@ -293,7 +293,7 @@ body {
   width: 1000px;
   margin-top: 3%;
   border-radius: 7px;
-  border: 1.5px solid rgb(185, 185, 185);
+  border: 1.5px solid rgb(229 229 229);
   background-color: rgba(238, 238, 238, 0.544);
   margin-bottom: 30px;
   margin-right: 20px;
@@ -323,7 +323,7 @@ body {
 
 .JournalEntries-card .header .search-button {
   background-color: #fff;
-  border: 1px solid rgb(150, 150, 150);
+  border: 1px solid rgb(229 229 229);
   border-radius: 4px;
   font-size: 12px;
   width: 60px;
@@ -335,7 +335,8 @@ body {
 }
 
 .JournalEntries-card .header .button {
-  border: 1px solid rgb(150, 150, 150);
+  border: 1px solid rgb(229 229 229);
+  background-color: #fff;
   border-radius: 4px;
   width: 120px;
   height: 30px;
@@ -387,7 +388,7 @@ body {
 
 .JournalEntries-card .body table button {
   background-color: #fff;
-  border: 1px solid rgb(150, 150, 150);
+  border: 1px solid rgb(229 229 229);
   border-radius: 4px;
   font-size: 12px;
   width: 100%;
@@ -448,21 +449,21 @@ body {
 
 
 .JournalEntries-card .footer .entries-counter-span {
-  border: 1px solid rgb(150, 150, 150);
+  border: 1px solid rgb(229 229 229);
   width: 20px;
   height: 22px;
   border-radius: 4px;
   margin-right: auto;
   margin-left: 10px;
   font-size: 13px;
-  color: rgb(150, 150, 150);
+  color:rgb(229 229 229);
   text-align: center;
 }
 
 .JournalEntries-card .footer .button {
   height: 20px;
   width: 80px;
-  border: 1px solid rgb(150, 150, 150);
+  border: 1px solid rgb(229 229 229);
   border-radius: 5px;
   font-size: 10px;
   font-weight: 500;
@@ -485,7 +486,7 @@ body {
   width: 900px;
   margin-top: 5%;
   border-radius: 7px;
-  border: 1.5px solid rgb(185, 185, 185);
+  border: 1.5px solid rgb(229 229 229);
   background-color: rgba(238, 238, 238, 0.544);
   margin-right: 60px;
   margin-bottom: 50px;
@@ -604,12 +605,12 @@ body {
   width: 550px;
 }
 
-.CreateNewJournalEntry-card .body input, select , .JournalEntries-card .header input {
-  border-radius: 2px;
+.CreateNewJournalEntry-card .body input, select, textarea , .JournalEntries-card .header input {
+  border-radius: 5px;
   border: 1px solid #cccccc;
 }
 
-.CreateNewJournalEntry-card .body input:focus , .JournalEntries-card .header input:focus {
+.CreateNewJournalEntry-card .body input:focus , textarea:focus, .JournalEntries-card .header input:focus {
   outline: 1px solid #5879dd;
   box-shadow: 1px 1px 20px rgba(72, 152, 227, 0.663);
 }
@@ -719,7 +720,7 @@ body {
 
 .JournalEntries-card .header .button-viewJournalEntry {
   background-color: #fff;
-  border: 1px solid rgb(150, 150, 150);
+  border: 1px solid rgb(229 229 229);
   margin-right: 7px;
   border-radius: 4px;
 }
@@ -731,7 +732,7 @@ body {
 
 .JournalEntries-card .header .backward-forward-icons button {
   background-color: #fff;
-  border: 1px solid rgb(150, 150, 150);
+  border: 1px solid rgb(229 229 229);
   width: 70px;
 }
 
@@ -841,4 +842,67 @@ body {
 .Delete-button:hover {
   background-color: rgb(190, 0, 0);
   border: none !important;
+}
+
+/* Reports */
+
+.Reports-card {
+  margin-top: 50px;
+  display: flex;
+  
+}
+
+.Reports-card .body-content .JournalEntries-card {
+  width: 440px;
+  height: 50px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.Reports-card .body-content .JournalEntries-card .header {
+  box-shadow: none;
+}
+
+.Reports-card .body-content .JournalEntries-card p {
+  margin-top: 18px;
+}
+
+.Reports-card .body-content .JournalEntries-card .body {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 1px solid rgb(229 229 229);
+  border-right: 1px solid rgb(229 229 229);
+  border-bottom: 1px solid rgb(229 229 229);
+  transform: translate(-2px, -2px);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.Reports-card .body-content .JournalEntries-card .body a {
+  width: 100%;
+  text-decoration: none;
+  background-color: rgba(245 245 245, 0.5);
+  border-bottom: 1px solid rgb(229 229 229);
+  padding: 6px 12px;
+  font-size: 15px;
+}
+
+.Reports-card .body-content .JournalEntries-card .body a:nth-last-of-type(1) {
+  border-bottom: none;
+}
+
+.Reports-card .body-content .JournalEntries-card .body a:hover {
+  background-color: rgb(245 245 245);
+}
+
+.Reports-card #div-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Reports-card #div-container .body-content:nth-of-type(2) .JournalEntries-card {
+  margin-top: 100px;
+  margin-bottom: 150px;
 }
