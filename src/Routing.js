@@ -10,6 +10,8 @@ import EditJournalEntry from "./Pages/EditJournalEntry";
 import Reports from "./Pages/Reports";
 import ShowReports from "./Pages/ShowReports";
 import CreateReport from "./Pages/CreateReport";
+import ViewReport from "./Pages/ViewReport";
+import EditReport from "./Pages/EditReport";
 
 // component
 import RouteBars from "./Components/RouteBars";
@@ -29,6 +31,8 @@ class Routing extends React.Component {
             <Route exact path="/reports" element={<Reports />}/>
             <Route exact path="/reports/show/:id" element={<ShowReports />}/>
             <Route exact path="/reports/create/:id" element={<CreateReport />}/>
+            <Route exact path="/reports/view" element={<ViewReport />}/>
+            <Route exact path="/reports/edit/:id" element={<EditReport />}/>
           </Routes>
         </BrowserRouter>
       </span>

@@ -8,86 +8,13 @@ function useQuery() {
   return React.useMemo(() => new URLSearchParams(search), [search]);
 }
 
-export default function CreateReport() {
+export default function EditReport() {
     const [NameQuery, setNameQuery] = useState()
     const { id } = useParams()
     let query = useQuery();
     useEffect(() => {
         setNameQuery(query.get("name"))
     })
-
-    const handleCreateReport = () => {
-        if(id === "ProfitAndLossStatement") {
-            if(localStorage.getItem("ProfitAndLossStatement")) {
-                const data = localStorage.getItem("ProfitAndLossStatement")
-                const parsedData = JSON.parse(data)
-                localStorage.setItem("ProfitAndLossStatement", JSON.stringify([...parsedData, "CH"]))
-            } else {
-                localStorage.setItem("ProfitAndLossStatement", JSON.stringify(["CH"]))
-            }
-        } else if(id === "ProfitAndLossStatementActualVsBudget") {
-            if(localStorage.getItem("ProfitAndLossStatementActualVsBudgett")) {
-                const data = localStorage.getItem("ProfitAndLossStatementActualVsBudget")
-                const parsedData = JSON.parse(data)
-                localStorage.setItem("ProfitAndLossStatementActualVsBudget", JSON.stringify([...parsedData, "CH"]))
-            } else {
-                localStorage.setItem("ProfitAndLossStatementActualVsBudget", JSON.stringify(["CH"]))
-            }
-        } else if(id === "BalanceSheet") {
-            if(localStorage.getItem("BalanceSheet")) {
-                const data = localStorage.getItem("BalanceSheet")
-                const parsedData = JSON.parse(data)
-                localStorage.setItem("BalanceSheet", JSON.stringify([...parsedData, "CH"]))
-            } else {
-                localStorage.setItem("BalanceSheet", JSON.stringify(["CH"]))
-            }
-        } else if(id === "StatementOfChangesInEquity") {
-            if(localStorage.getItem("StatementOfChangesInEquity")) {
-                const data = localStorage.getItem("StatementOfChangesInEquity")
-                const parsedData = JSON.parse(data)
-
-                localStorage.setItem("StatementOfChangesInEquity", JSON.stringify([...parsedData, "CH"]))
-            } else {
-                localStorage.setItem("StatementOfChangesInEquity", JSON.stringify(["CH"]))
-            }
-        } else if(id === "TrialBalance") {
-            if(localStorage.getItem("TrialBalance")) {
-                const data = localStorage.getItem("TrialBalance")
-                const parsedData = JSON.parse(data)
-
-                localStorage.setItem("TrialBalance", JSON.stringify([...parsedData, "CH"]))
-            } else {
-                localStorage.setItem("TrialBalance", JSON.stringify(["CH"]))
-            }
-        } else if(id === "GeneralLedgerSummary") {
-            if(localStorage.getItem("GeneralLedgerSummary")) {
-                const data = localStorage.getItem("GeneralLedgerSummary")
-                const parsedData = JSON.parse(data)
-                localStorage.setItem("GeneralLedgerSummary", JSON.stringify([...parsedData, "CH"]))
-            } else {
-                localStorage.setItem("GeneralLedgerSummary", JSON.stringify(["CH"]))
-            }
-        } else if(id === "GeneralLedgerTransactions") {
-            if(localStorage.getItem("GeneralLedgerTransactions")) {
-                const data = localStorage.getItem("GeneralLedgerTransactions")
-                const parsedData = JSON.parse(data)
-
-                localStorage.setItem("GeneralLedgerTransactions", JSON.stringify([...parsedData, "CH"]))
-            } else {
-                localStorage.setItem("GeneralLedgerTransactions", JSON.stringify(["CH"]))
-            }
-        } else if(id === "CustomReports") {
-            if(localStorage.getItem("CustomReports")) {
-                const data = localStorage.getItem("CustomReports")
-                const parsedData = JSON.parse(data)
-
-                localStorage.setItem("CustomReports", JSON.stringify([...parsedData, "CH"]))
-            } else {
-                localStorage.setItem("CustomReports", JSON.stringify(["CH"]))
-            }
-        }
-        window.location.href = "/reports"
-    }
   return (
     <PageWrapper>
       <div className='CreateNewJournalEntry-container'>
@@ -98,7 +25,7 @@ export default function CreateReport() {
                 <i class="fa-solid fa-caret-right" style={{marginRight: "0px"}}></i> 
                 <a href={`/reports/show/${id}?name=${NameQuery}`}>{NameQuery}</a>
                 <i class="fa-solid fa-caret-right"></i> 
-                <p>{NameQuery} - Create</p></div>
+                <p>{NameQuery} - Edit</p></div>
           </div>
       </div>
       <div className="body-content">
@@ -742,8 +669,9 @@ export default function CreateReport() {
                         
                     </>
                     }
-                    <div className="footer" style={{width: "100%"}}>
-                          <button className="button" onClick={handleCreateReport} style={{marginBottom: "0px"}} >Create</button>
+                    <div className="footer" style={{width: "100%", height: "auto"}}>
+                        <button className="button Update-button">Update</button>
+                        <button className="button Delete-button">Delete</button>
                     </div>
                 </div>
             </div>

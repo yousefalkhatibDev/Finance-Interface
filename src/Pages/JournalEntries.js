@@ -49,7 +49,7 @@ class JournalEntries extends React.Component {
             </div>
           </div>
           <div className="body" style={{height: "auto"}}>
-            <table>
+            <table >
               <tr>
                 <th id="td-1"><i class="fas fa-edit" style={{fontSize: "16px", opacity: 0.25}}></i></th>
                 <th id="td-2"><i class="fas fa-print" style={{fontSize: "16px", opacity: 0.25}}></i></th>

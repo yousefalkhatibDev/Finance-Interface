@@ -380,13 +380,13 @@ body {
   background-color: rgb(2, 105, 208);
 }
 
-.JournalEntries-card .body table {
+table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-.JournalEntries-card .body table button {
+table button {
   background-color: #fff;
   border: 1px solid rgb(229 229 229);
   border-radius: 4px;
@@ -394,12 +394,12 @@ body {
   width: 100%;
 }
 
-.JournalEntries-card .body table button:hover {
+ table button:hover {
   background-color: rgba(189, 189, 189, 0.468);
   border: 1px solid rgb(118, 118, 118);
 }
 
-.JournalEntries-card .body td, th {
+.body td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -833,7 +833,7 @@ body {
 }
 
 .Delete-button {
-  background-color: red;
+  background-color: red !important;
   color: #fff !important;
   width: 80px !important;
   height: 35px !important;
@@ -905,4 +905,47 @@ body {
 .Reports-card #div-container .body-content:nth-of-type(2) .JournalEntries-card {
   margin-top: 100px;
   margin-bottom: 150px;
+}
+
+/* reports view paper */
+
+.full-width-lis b {
+  display: flex;
+}
+
+.full-width-lis b span {
+  margin-left: auto;
+  margin-right: 15px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: inline;
+  width: 10%;
+}
+
+.full-width-lis li {
+  display: flex;
+  margin-bottom: 7px;
+}
+
+.full-width-lis li span {
+  margin-left: auto;
+  margin-right: 15px;
+  color: rgb(12, 121, 180);
+}
+
+#Net-profit {
+  display: flex;
+  justify-content: center;
+}
+
+#Net-profit p {
+  display: flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 30px;
+  width: 95%;
+}
+
+#Net-profit p span {
+  margin-left: auto;
 }
