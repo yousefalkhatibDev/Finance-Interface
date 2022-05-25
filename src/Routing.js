@@ -7,6 +7,11 @@ import JournalEntries from "./Pages/JournalEntries";
 import CreateNewJournalEntry from "./Pages/CreateNewJournalEntry";
 import ViewJournalEntry from "./Pages/ViewJournalEntry";
 import EditJournalEntry from "./Pages/EditJournalEntry";
+import Reports from "./Pages/Reports";
+import ShowReports from "./Pages/ShowReports";
+import CreateReport from "./Pages/CreateReport";
+import ViewReport from "./Pages/ViewReport";
+import EditReport from "./Pages/EditReport";
 
 // component
 import RouteBars from "./Components/RouteBars";

@@ -112,7 +112,7 @@ export default class CreateNewJournalEntry extends Component {
     const data = {};
 
     await axios.post("/create", data).then((res) => {
-      console.log(res.data)
+      console.log(res.data);
     });
 
     if (redirect && redirect === true) {
