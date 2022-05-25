@@ -1,11 +1,11 @@
 import React from "react";
+
+// components
+import SummaryCard from "../Components/SummaryCard";
 import PageWrapper from "../Components/PageWrapper";
 
 // style
 import "./../style/custom.css";
-
-// components
-import SummaryCard from "../Components/SummaryCard";
 
 class Home extends React.Component {
   render() {
