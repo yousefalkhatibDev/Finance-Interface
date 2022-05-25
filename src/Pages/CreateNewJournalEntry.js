@@ -171,7 +171,7 @@ export default class CreateNewJournalEntry extends Component {
                             <label className="checkbox-label">Line description</label>
                         </div>
                     </div>
-                    <div className="footer">
+                    <div className="footer" >
                         <button className="button" onClick={this.submitData}>Create</button>
                         <button className="button" onClick={() => this.submitData(true)}>Create & add another</button>
                     </div>
