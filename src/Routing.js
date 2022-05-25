@@ -20,9 +20,21 @@ class Routing extends React.Component {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/journal-entries" element={<JournalEntries />} />
-            <Route exact path="/journal-entries/create" element={<CreateNewJournalEntry />} />
-            <Route exact path="/journal-entries/view/:id" element={<ViewJournalEntry/>}/>
-            <Route exact path="/journal-entries/edit/:id" element={<EditJournalEntry />}/>
+            <Route
+              exact
+              path="/journal-entries/create"
+              element={<CreateNewJournalEntry />}
+            />
+            <Route
+              exact
+              path="/journal-entries/view/:id"
+              element={<ViewJournalEntry />}
+            />
+            <Route
+              exact
+              path="/journal-entries/edit/:id"
+              element={<EditJournalEntry />}
+            />
           </Routes>
         </BrowserRouter>
       </span>

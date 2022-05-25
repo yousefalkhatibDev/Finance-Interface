@@ -1,26 +1,9 @@
+
 # JavaScript Coding Guidelines
-
-This is a set of coding conventions and rules for use in JavaScript programming. It is inspired by the Sun document Code Conventions for the Java Programming Language. It is heavily modified of course because JavaScript is not Java.
-
-The long-term value of software to an organization is in direct proportion to the quality of the codebase. Over its lifetime, a program will be handled by many pairs of hands and eyes. If a program is able to clearly communicate its structure and characteristics, it is less likely that it will break when modified in the never-too-distant future.
-
-Code conventions can help in reducing the brittleness of programs.
-
-All of our JavaScript code is sent directly to the public. It should always be of publication quality.
-
-Neatness counts.
-
-## JavaScript Files
-
-JavaScript programs should be stored in and delivered as .js files.
-
-JavaScript code should not be embedded in HTML files unless the code is specific to a single session. Code in HTML adds significantly to pageweight with no opportunity for mitigation by caching and compression.
-
-`<script src="filename.js">` tags should be placed as late in the body as possible. This reduces the effects of delays imposed by script loading on other page components. There is no need to use the language or type attributes. It is the server, not the script tag, that determines the MIME type.
 
 ## Indentation
 
-The unit of indentation is two spaces. Use of tabs should be avoided because (as of this writing in the 21st Century) there still is not a standard for the placement of tabstops. The use of spaces can produce a larger filesize, but the size is not significant over local networks, and the difference is eliminated by minification.
+The unit of indentation is two spaces. The use of tabs should be avoided because (as of this writing in the 21st Century) there still is not a standard for the placement of tabstops. The use of spaces can produce a larger filesize, but the size is not significant over local networks, and the difference is eliminated by minification.
 
 ## Line Length
 
@@ -30,7 +13,7 @@ Avoid lines longer than 80 characters. When a statement will not fit on a single
 
 Be generous with comments. It is useful to leave information that will be read at a later time by people (possibly yourself) who will need to understand what you have done. The comments should be well-written and clear, just like the code they are annotating. An occasional nugget of humor might be appreciated. Frustrations and resentments will not.
 
-It is important that comments be kept up-to-date. Erroneous comments can make programs even harder to read and understand.
+It is important that comments be kept up to date. Erroneous comments can make programs even harder to read and understand.
 
 Make comments meaningful. Focus on what is not immediately visible. Don't waste the reader's time with stuff like
 
@@ -42,7 +25,7 @@ Generally use line comments. Save block comments for formal documentation and fo
 
 ## Variable Declarations
 
-All variables should be declared before used. JavaScript does not require this, but doing so makes the program easier to read and makes it easier to detect undeclared variables that may become implied globals. Implied global variables should never be used.
+All variables should be declared before being used. JavaScript does not require this, but doing so makes the program easier to read and makes it easier to detect undeclared variables that may become implied globals. Implied global variables should never be used.
 
 The var statements should be the first statements in the function body.
 
@@ -102,7 +85,7 @@ function getElementsByClassName(className) {
 }
 ```
 
-If a function literal is anonymous, there should be one space between the word function and the ( (left parenthesis). If the space is omited, then it can appear that the function's name is function, which is an incorrect reading.
+If a function literal is anonymous, there should be one space between the word function and the ( (left parenthesis). If the space is omitted, then it can appear that the function's name is function, which is an incorrect reading.
 
 ``` js
 div.onclick = function (e) {
@@ -213,7 +196,7 @@ if (condition) {
 
 ### for Statement
 
-A for class of statements should have the following form:
+A for the class of statements should have the following form:
 
 ``` js
 for (initialization; condition; update) {
