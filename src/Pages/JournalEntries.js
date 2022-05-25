@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
+import PageWrapper from "../Components/PageWrapper";
 
 // components
 import JournalEntry from "../Components/JournalEntry";
-import PageWrapper from "../Components/PageWrapper";
 
 // styles
 import "./../style/custom.css";
@@ -15,7 +15,6 @@ class JournalEntries extends React.Component {
       entries: [],
     };
   }
-
   componentDidMount() {
     if (localStorage.getItem("entries")) {
       const localStorageEntries = JSON.parse(localStorage.getItem("entries"));
@@ -24,13 +23,12 @@ class JournalEntries extends React.Component {
       });
     }
   }
-
   render() {
     return (
       <PageWrapper>
         <div className="body-content">
           {this.state.entries.length ? (
-            <div className="JournalEntries-card ">
+            <div className="JournalEntries-card">
               <div className="header padding">
                 <>
                   <p>Journal Entries</p>
